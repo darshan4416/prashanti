@@ -1,0 +1,103 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+.header {
+   overflow: hidden;
+   background-color: white;
+   padding: 20px 10px;
+ }
+
+ .header a {
+   float: left;
+   color: grey;
+   text-align: center;
+   padding: 12px;
+   text-decoration: none;
+   font-size: 18px;
+   line-height: 25px;
+   border-radius: 4px;
+   align-items: center;
+   justify-content: space-between;
+ }
+ 
+.logo img{
+    width:70px;
+    cursor: pointer;
+}
+ /* Change the background color on mouse-over */
+  .header a:hover {
+    color: green; 
+   /* border-bottom: 3px solid green;  */
+ }  
+ .header-right {
+   float: right;
+ }
+ 
+ /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+ @media screen and (max-width: 500px) {
+   .header a {
+     float: none;
+     display: block;
+     text-align: left;
+   }
+   .header-right {
+     float: none;
+   }
+ }
+
+.heading{
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   background: white;
+   color: black;
+}
+h3{
+   margin-left: 50px;
+}
+img {
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   padding: 5px;
+   width: 150px;
+ }
+ 
+ img:hover {
+    border:3px solid black;
+   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+ }
+ 
+.wrapper{
+   background: white;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap:20px;
+   padding:20px;
+   margin-right: 40px;
+   margin-left:  40px;
+}
+.pic{
+   background: green;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   border-radius: 4px;
+   border-color:green;
+   cursor: pointer;
+}
+@media screen and (max-width:768px)
+{
+   .wrapper{
+       grid-template-columns: repeat(2,1fr);
+   }
+}
+@media screen and (max-width:576px)
+{
+   .wrapper{
+       grid-template-columns: repeat(1,1fr);
+   }
+}
